@@ -3,7 +3,7 @@ html{
 }
 
 body{
-  background-color: #ddd;
+  background-color: black;
   font-size: 18px;
   margin: 0;
   padding: 0;
@@ -60,10 +60,11 @@ border around all elements in focus.*/
   
 
 footer{
-  background-color: black;
   color: white;
+  background-color: black;
+
   grid-column: 1 / -1;  /*Can you explain what this does?*/
-  grid-row: 7 / auto;   /*Can you rewrite it?*/
+  grid-row: 1 / span 1;   /*Can you rewrite it?*/
   padding-top: 30px;
   text-align: center;
 }
@@ -74,8 +75,8 @@ nav{
   text-align: left;
 
   /*Your code here*/
-  /*Span the top row*/
-
+  grid-column: 1 / -1;
+  grid-row: 1 / 1;
 }
 
 header{
@@ -144,7 +145,8 @@ header p{
   padding: 30px;
   /*Your code here:*/
   /*Align the content in the center */
-
+  align-content: center;
+  justify-content: space-between;
 }
 
 
