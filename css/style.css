@@ -88,12 +88,12 @@ nav{
 }
 
 header{
-
+  background-image: url(../images/header.jpg);
   background-attachment: fixed; /* Parallax effect */     
   background-position: center;  /* Parallax effect */
   background-repeat: no-repeat; /* Parallax effect */
   background-size: cover;       /* Parallax effect */
-  background-image: url("images/header.jpg");
+ 
 
   color: black;
   height: 400px;                /* Parallax effect */
@@ -191,6 +191,13 @@ Begin on the third, fourth, … rows respectively and each span one row. */
   .container{
   /*Your code here */
   /* See documentation for desktop view */ 
+  /* Five columns: 50px, auto, 500px, auto, and  50px */
+  /* Seven rows: 70px, 400px, 400px, 400px, 400px, 400px, and 100px.  */
+  
+    display: grid;
+    grid-template-columns: 50px auto 500px auto 50px;
+    grid-template-rows: 70px 400px 400px 400px 400px 400px 100px;
+
   }
 
   nav{
@@ -203,12 +210,14 @@ Begin on the third, fourth, … rows respectively and each span one row. */
   .about, .clients, .method-image, .contact-image{
   /*Your code here */
   /* See documentation for desktop view */ 
+    grid-column: 3 / span 2;
   }
 
   .about-image, .clients-image, .method, .contact{
     /*Your code here */
     /* See documentation for desktop view */ 
-    }
+    grid-column: 2 / span 2;
+  }
 
 
 }  /*End the media query*/
