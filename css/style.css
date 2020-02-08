@@ -45,30 +45,28 @@ nav a:hover{
   transition: top 1s ease-out;
   z-index: 1;
   /*Your code here - position relative to the parent */
-  position: absolute;
+  position: relative;
   /*Your code here - place 40px higher */;
-  margin-top: -40px;
+  top: -40px;
 }
 
 /*Your code here*/
 /*Add the selector and rule to move the skip 
 link to the exact top of the page.*/
-.skip:focus{
-  position:absolute;
-  margin-top: 0;
+.skip a:focus{
+  top: 0 px;
 }
 
 /*Your code here*/
 /*Add the selector and code to put a 2px black 
 border around all elements in focus.*/
 *:focus{
-  border: 2px;
-  border-color:black;
+  border: 2px solid black;
 }
   
 
 footer{
-  /* color: white; */
+  color: white;
   background-color: black;
 
   grid-column: 1 / -1;  /*Can you explain what this does?*/
@@ -93,22 +91,16 @@ header{
   background-position: center;  /* Parallax effect */
   background-repeat: no-repeat; /* Parallax effect */
   background-size: cover;       /* Parallax effect */
- 
-
-  color: black;
+  color: white;
   height: 400px;                /* Parallax effect */
 
   grid-column: 1 / -1;
   grid-row: 2 / span 1;
 
-  /* Spans all of the columns.
-  Begins on 2nd row and spans 1 row.
-  Header uses header.jpg as a non-repeating 
-  background image with parallax */
 }
 
 header p{
-  color: black;
+  color: white;
   font-size: 24px;
   padding: 0 100px;
   text-align: center;
@@ -116,29 +108,17 @@ header p{
 
 
 .container{
-  /* Three columns:  100px, 400px, and 100px
-  Seven rows: 30px, five auto, and 100px. 
-  Gap 15px between rows; */
-
   display: grid;
   grid-template-columns: 100px 400px 100px;
-  grid-template-rows: 30px auto auto auto auto auto 100px;
+  grid-template-rows: 30px auto auto auto auto auto;
   row-gap: 15px;
-
 
 }
 .about, .method, .clients, .contact{
-  /* Begin in 2nd  column and span one column
-  Begin on the third, fourth, … rows    
-   respectively and each span one row. */
   grid-column: 2 / 3;
 }
 
 .about-image, .method-image, .clients-image, .contact-image{
-  /* Span all of the columns.
-Have a maximum height of  700px
-Hide any content that goes outside their grid cell. 
-Begin on the third, fourth, … rows respectively and each span one row. */
   max-height: 700px;
   overflow: hidden;
   grid-column: 1 / -1;
@@ -147,29 +127,21 @@ Begin on the third, fourth, … rows respectively and each span one row. */
 }
 
 .about, .about-image{
-  /*Your code here */
-  /* See documentation for mobile view */
   grid-row: 3 / span 1;
 }
 
 .method, .method-image{
-  /*Your code here */
-  /* See documentation for mobile view */
   grid-row: 4 / span 1;
 }
 
 
 .clients, .clients-image{
-  /*Your code here */
-  /* See documentation for mobile view */
   grid-row: 5 / span 1;
 
 }
 
 
 .contact, .contact-image{
-  /*Your code here */
-  /* See documentation for mobile view */
   grid-row: 6 / span 1;
 
 }
@@ -178,8 +150,6 @@ Begin on the third, fourth, … rows respectively and each span one row. */
   background-color: rgba(255, 255, 255, .8);
   border: 10px solid black;
   padding: 30px;
-  /*Your code here:*/
-  /*Align the content in the center */
   align-content: center;
   align-self: center;
 }
@@ -189,11 +159,6 @@ Begin on the third, fourth, … rows respectively and each span one row. */
 @media all and (min-width: 800px){
 
   .container{
-  /*Your code here */
-  /* See documentation for desktop view */ 
-  /* Five columns: 50px, auto, 500px, auto, and  50px */
-  /* Seven rows: 70px, 400px, 400px, 400px, 400px, 400px, and 100px.  */
-  
     display: grid;
     grid-template-columns: 50px auto 500px auto 50px;
     grid-template-rows: 70px 400px 400px 400px 400px 400px 100px;
@@ -208,14 +173,10 @@ Begin on the third, fourth, … rows respectively and each span one row. */
   }
 
   .about, .clients, .method-image, .contact-image{
-  /*Your code here */
-  /* See documentation for desktop view */ 
     grid-column: 3 / span 2;
   }
 
   .about-image, .clients-image, .method, .contact{
-    /*Your code here */
-    /* See documentation for desktop view */ 
     grid-column: 2 / span 2;
   }
 
